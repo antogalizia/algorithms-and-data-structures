@@ -73,14 +73,6 @@ def esPalindroma(s: str) -> bool:
         i += 1
     return False
 
-
-print(esPalindroma("Hola"))
-print(esPalindroma("jajaj"))
-print(esPalindroma("que"))
-print(esPalindroma("sos"))
-print(esPalindroma("Hola aloH"))
-print(esPalindroma("queuq"))
-
     
 def tieneMinus(s: str) -> bool:
     for i in range(len(s)):
@@ -118,14 +110,6 @@ def esContraseñaSegura(s: str) -> str:
         return "ROJA"
     else:
         return "AMARILLA"
-    
-                    
-print(esContraseñaSegura("Holaque1"))
-print(esContraseñaSegura("Holaquet1"))
-print(esContraseñaSegura("holaquetal"))
-print(esContraseñaSegura("adios"))
-print(esContraseñaSegura("hola"))
-print(esContraseñaSegura("Ho1l"))
 
 
 #Ejercicio 8
@@ -140,9 +124,6 @@ def saldoActual(l: list[(str,int)]) -> int:
     return saldo
 
 
-print(saldoActual([("I", 2000), ("R",20), ("R", 1000), ("I", 300)]))
-
-
 #Ejercicio 9
 
 def pertenece(s: list(), e) -> bool:
@@ -150,6 +131,7 @@ def pertenece(s: list(), e) -> bool:
         if s[i] == e:
             return True
     return False
+
 
 vocales = ["a", "e", "i", "o", "u"]
 
@@ -170,21 +152,9 @@ def vocalesDistintas(s: str) -> bool:
         return False
 
 
-print(vocalesDistintas("armonioso"))
-print(vocalesDistintas("antojo"))
-print(vocalesDistintas("red"))
-
-
 #SEGUNDA PARTE
 
 #Ejercicio 1
-
-def esPar(num: int) -> bool:
-    if num % 2 == 0:
-        return True
-    else:
-        return False
-
 
 def cambiaPosicionesPares(l: list[int]) -> list[int]:
     i = 0
@@ -195,9 +165,12 @@ def cambiaPosicionesPares(l: list[int]) -> list[int]:
         i += 1
     return l 
 
-print(cambiaPosicionesPares([1,2,3,4,5,6]))
-print(cambiaPosicionesPares([2,8,7,3,1,24,3]))
-print(cambiaPosicionesPares([2,8,7,3,1,24,3,5,80]))
+
+def esPar(num: int) -> bool:
+    if num % 2 == 0:
+        return True
+    else:
+        return False
 
 
 #Ejercicio 2
@@ -213,11 +186,6 @@ def cambiaPosicionesPares2(l: list[int]) -> list[int]:
         i += 1
     return l1
 
-print(cambiaPosicionesPares2([1,2,3,4,5,6]))
-print(cambiaPosicionesPares2([2,8,7,3,1,24,3]))
-print(cambiaPosicionesPares2([2,8,7,3,1,24,3,5,80]))
-
-
 
 #Ejercicio 3
 
@@ -227,10 +195,6 @@ def sinVocales(s: str) -> str:
         if pertenece(vocales, s[i]):
             nuevaS = nuevaS.replace(s[i], "")
     return nuevaS
-
-print(sinVocales("holaquetal"))
-print(sinVocales("jajaja"))
-print(sinVocales("srwt"))
 
 
 #Ejercicio 4
@@ -242,8 +206,6 @@ def reemplazaVocales(s: str) -> str:
             nuevaS = nuevaS.replace(s[i], " ")
     return nuevaS
 
-print(reemplazaVocales("hola que tal"))
-
 
 #Ejercicio 5
 
@@ -252,8 +214,6 @@ def daVueltaStr(s: str) -> str:
     for i in range(1,len(s)+1):
         nuevaS = nuevaS + s[-i]
     return nuevaS
-    
-print(daVueltaStr("hola"))
 
 
 #Ejercicio 6
@@ -268,9 +228,6 @@ def perteneceAcadaUno(l: list(list[int]), elem: int) -> list[bool]:
     return res
 
 
-print(perteneceAcadaUno([[1,2],[3,4],[3,5]], 1))
-
-
 #Ejercicio 7
 
 def esMatriz(m: list[list[int]]) -> bool:
@@ -280,10 +237,6 @@ def esMatriz(m: list[list[int]]) -> bool:
         if len(m[0]) != len(m[i]):
              return False
     return True
-
-
-print(esMatriz([[1,1,2], [2,3]]))
-print(esMatriz([[1,1,2], [2,3,4], [0,2,6]]))
 
 
 def ordenados(s: list[int]) -> bool:
@@ -307,6 +260,3 @@ def filasOrdenadas(m: list[list[int]]) -> list[bool]:
     return res
 
 
-print(filasOrdenadas([[1,2,3], [4,5]]))
-print(filasOrdenadas([[1,2,1], [], [0,2,6]]))
-        
